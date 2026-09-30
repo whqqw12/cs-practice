@@ -1,4 +1,4 @@
-porog = int(input())
+porog = float(input())
 n = int(input())
 k = 0
 er = 0
