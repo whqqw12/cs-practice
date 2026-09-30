@@ -3,7 +3,7 @@ n = int(input())
 k = 0
 er = 0
 pr = 0
-mx = 0
+mx = float('-inf')
 cr = 0
 summ = 0
 for i in range(n):
