@@ -32,4 +32,16 @@ def count_types(rows: list[dict]) -> dict:
     return counts
 
 
+def total_minutes(rows: list[dict], kind: str) -> float:
+    total = 0.0
+    for row in rows:
+        if row["тип"] == kind:
+            minutes = row["минуты"].replace(",", ".")
+            try:
+                total += float(minutes)
+            except ValueError:
+                continue
+
+    return round(total, 1)
+
 
