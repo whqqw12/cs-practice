@@ -8,4 +8,9 @@ def unique_sorted(values: list) -> list:
     return sorted(set(values))
 
 
+def common(first: list, second: list) -> list:
+    return sorted(set(first) & set(second))
+
+
+
 
