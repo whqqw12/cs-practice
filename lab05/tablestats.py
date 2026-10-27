@@ -11,14 +11,14 @@ def read_rows(lines: list[str]) -> list[dict]:
         if len(parts) != len(header):
             continue
         rows.append(dict(zip(header, parts)))
-        return rows
+    return rows
 
 def count_types(rows: list[dict]) -> dict:
     counts = {}
     for row in rows:
         kind = row.get('тип', '')
         counts[kind] = counts.get(kind, 0) + 1
-        return counts
+    return counts
 
 def total_minutes(rows: list[dict], kind: str) -> float:
     total = 0.0
