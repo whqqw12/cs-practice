@@ -11,3 +11,11 @@ def average(scores: list[float]) -> float:
     total = sum(scores)
     result = total / len(scores)
     return round(result, 2)
+
+def ranking(names: list[str], scores: list[float]) -> list[str]:
+    indexes = list(range(len(scores)))
+    indexes.sort(key=lambda i: scores[i], reverse=True)
+    result = []
+    for i in indexes:
+        result.append(names[i])
+    return result
