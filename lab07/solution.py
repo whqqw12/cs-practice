@@ -9,7 +9,7 @@ def reshape_rows(values :  list[float], width : int) -> list[list[float]]:
 
 def block(matrix: list[list[float]], rows:list[int], columns: list[int]) -> list[list[float]]:
     arr = np.asarray(matrix, dtype = float)
-    result = arr[np.ix_(rows,ccolumns)]
+    result = arr[np.ix_(rows, columns)]
     return result.tolist()
 
 def column_means(matrix : list[list[float]]) -> list[float]:
