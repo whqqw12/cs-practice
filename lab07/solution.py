@@ -6,5 +6,12 @@ def reshape_rows(values :  list[float], width : int) -> list[list[float]]:
     arr = np.asarray(values, dtype = float)
     matrix = arr.reshape(-1, width)
     return matrix.tolist()
-print(reshape_rows([12,14.4,11,13,15.5,10.5], 3))
+
+def block(matrix: list[list[float]], rows:list[int], columns: list[int]) -> list[list[float]]:
+    arr = np.asarray(matrix, dtype = float)
+    result = arr[np.ix_(rows,ccolumns)]
+    return result.tolist()
+
+
+
     
