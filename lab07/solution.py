@@ -19,4 +19,10 @@ def column_means(matrix : list[list[float]]) -> list[float]:
     means = np.mean(arr, axis = 0)
     return np.round(means,6).tolist()
 
-    
+def column_range(matrix: list[list[float]], column: int) -> float:
+    if len(matrix) == 0:
+        return 0.0
+    arr = np.asarray(matrix, dtype=float)
+    values = arr[:, column]
+    result = np.max(values) - np.min(values)
+    return round(float(result), 6)
