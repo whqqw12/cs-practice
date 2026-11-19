@@ -6,7 +6,7 @@ def make_hours() -> list[int]:
 def vector_report(values: list[float]) -> dict:
     arr = np.asanyarray(values,dtype = float)
     return {
-        "third" : floar(arr[2]),
+        "third" : float(arr[2]),
         "last" : float(arr[-1]),
         "middle" : arr[2:6].tolist(),
         "every_second" : arr[::2].tolist(),
@@ -17,7 +17,7 @@ def change_vector(values: list[float]) -> list[float]:
     arr[2:5] = 99
     arr[::2] = -1
     return arr.tolist()
-def cap_above(values: list[float]) -> list[float]:
+def cap_above(values: list[float]) -> list[float], limit: float) -> list[float]:
     arr = np.asanyarray(values,dtype=float).copy()
     arr[arr > limit] = limit
     return arr.tolist()
