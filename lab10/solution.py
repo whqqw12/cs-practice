@@ -1,4 +1,4 @@
-from numpy as np
+import numpy as np
 
 def make_table(rows : int, columns : int) -> list[list[int]]:
     a = np.arange(rows*columns)
