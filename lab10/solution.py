@@ -1,6 +1,6 @@
-from numpy import *
+from numpy as np
 
-def make_tables(rows : int, columns : int) -> list[list[int]]:
+def make_table(rows : int, columns : int) -> list[list[int]]:
     a = np.arange(rows*columns)
     a = a.reshape(rows,columns)
     return a.tolist()
