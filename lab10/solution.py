@@ -21,7 +21,7 @@ def matrix_vector_product(matrix : list[list[float]], vector : list[float]) -> l
     c = a @ b
     return c.tolist()
 
-def matrix_multiply(left : list[list[float]], right : list[list[float]] -> list[list[float]]):
+def matrix_multiply(left : list[list[float]], right : list[list[float]]) -> list[list[float]]:
     a = np.array(left)
     b = np.array(right)
     c = a @ b
@@ -31,3 +31,20 @@ def transpose_matrix(matrix : list[list[float]]) -> list[list[float]]:
     a = np.array(matrix)
     b = a.T
     return b.tolist()
+
+def solve_system(matrix : list[list[float]], vector : list[float]) -> list[float]:
+    a = np.array(matrix)
+    b = np.array(vector)
+    x = np.linalg.solve(a,b)
+    return x.round(6).tolist()
+
+def tensor_channel_mean(tensor : list) -> list:
+    a = np.array(tensor)
+    b = a.mean(axis = -1)
+    return b.tolist()
+
+def point_distance(first : list[float], second : list[float]) -> float:
+    a = np.array(first)
+    b = np.array(second)
+    c = np.linalg.norm(a - b)
+    return round(float(c), 6)
